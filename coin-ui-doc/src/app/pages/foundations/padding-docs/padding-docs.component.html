@@ -1,0 +1,53 @@
+<h1 ci-typography="heading-md" color="gray-900" weight="bold">
+  Padding
+</h1>
+<div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
+<section class="ci-pl-md">
+  <ng-content *ngFor="let size of sizes">
+    <div class="ci-fr ci-aic ci-gap-xs ci-mb-xs">
+      <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+        Padding {{size.category}}
+      </h2>
+      <span ci-typography="body-sm" color="gray-900" weight="regular">
+        [
+          <span class="ci-color-feedback-info-400 ci-font-weight-bold">class</span>="
+          <span class="ci-color-feedback-warning-500 ci-font-weight-bold">ci-m{{size.id}}-</span>
+          <span class="ci-font-weight-bold">SIZE</span>"
+        ]
+      </span>
+    </div>
+    <div class="ci-fr ci-gap-xl ci-aic">
+      <ng-content *ngFor="let item of size.itens">
+        <div class="ci-border-gray-900-md">
+          <div
+            [ngClass]="getClassValue(size,item)"
+            class="ci-background-feedback-success-400 ci-cursor-pointer"
+            (click)="copyText('ci-p' + size.id + '-' + item.name)">
+            <div class="ci-background-gray-0 ci-py-md ci-px-xl ci-fc">
+              <span ci-typography="body-md" color="gray-900" weight="bold" class="ci-fc ci-aic">
+                <span>{{ item?.name }}</span>
+              </span>
+              <span ci-typography="body-xs" color="gray-900" weight="regular" class="ci-fc ci-aic">
+                <span>{{ item?.size }}</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </ng-content>
+    </div>
+    <div class="ci-my-xxl"></div>
+  </ng-content>
+</section>
+
+<ng-container *ngIf="copied">
+  <ci-dialog>
+    <div class="ci-fc ci-gap-sm">
+      <span ci-typography="body-sm" color="gray-900" weight="bold">
+        Copiado!!!
+      </span>
+      <span ci-typography="body-sm" color="gray-600" weight="regular">
+        {{content}}
+      </span>
+    </div>
+  </ci-dialog>
+</ng-container>

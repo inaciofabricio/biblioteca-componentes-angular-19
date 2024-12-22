@@ -1,0 +1,29 @@
+@use './variables';
+
+.ci {
+  @each $key, $value in variables.$sizes {
+    &-m-#{$key} {
+      margin: #{$value}px;
+    }
+    &-mt-#{$key} {
+      margin-top: #{$value}px;
+    }
+    &-mr-#{$key} {
+      margin-right: #{$value}px;
+    }
+    &-mb-#{$key} {
+      margin-bottom: #{$value}px;
+    }
+    &-ml-#{$key} {
+      margin-left: #{$value}px;
+    }
+    &-mx-#{$key} {
+      margin-left: #{$value}px;
+      margin-right: #{$value}px;
+    }
+    &-my-#{$key} {
+      margin-top: #{$value}px;
+      margin-bottom: #{$value}px;
+    }
+  }
+}

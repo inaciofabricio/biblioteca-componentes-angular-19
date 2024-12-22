@@ -1,0 +1,9 @@
+@use './variables';
+
+.ci {
+  @each $key, $value in variables.$sizes-border-radius {
+    &-border-radius-#{$key} {
+      border-radius: $value;
+    }
+  }
+}

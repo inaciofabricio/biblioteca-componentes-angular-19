@@ -1,0 +1,58 @@
+<h1 ci-typography="heading-md" color="gray-900" weight="bold">
+  Color
+</h1>
+<div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
+<section class="ci-pl-md">
+  <ng-content *ngFor="let color of colors">
+    <div class="ci-fr ci-aic ci-gap-xs ci-mb-xs">
+      <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+        {{color.category}}
+      </h2>
+      <span ci-typography="body-sm" color="gray-900" weight="regular">
+        [
+          <span class="ci-color-feedback-info-400 ci-font-weight-bold">class</span>="
+          <span class="ci-color-feedback-warning-500 ci-font-weight-bold">ci-color-{{color.id}}-</span>
+          <span class="ci-font-weight-bold">NUMBER</span>"
+        ]
+      </span>
+    </div>
+    <div class="ci-fr ci-gap-sm ci-fw">
+      <ng-content *ngFor="let item of color.itens">
+        <ci-card
+          radius="lg" shadow="lg" padding="xs" class="ci-fb-10 ci-cursor-pointer"
+          (click)="copyText('ci-color-' + color.id + '-' + item.name)">
+          <div class="ci-p-xs ci-border-gray-300-sm ci-background-gray-0">
+            <span ci-typography="body-xs" [color]="getColorValue(color, item)" weight="regular">
+              Lorem ipsum dolor sit amet.
+            </span>
+          </div>
+          <div class="ci-fc">
+            <span ci-typography="body-xs" color="gray-900" weight="bold" class="ci-fr ci-jcc">
+              {{item.name}}
+            </span>
+            <div class="ci-fr ci-gap-xxs ci-jcc ci-aic">
+              <div class="ci-p-xxs" [ngClass]="['ci-background-' + getColorValue(color, item)]"></div>
+              <span ci-typography="body-xxs" color="gray-900" weight="regular" class="ci-fr ci-jcc">
+                {{item.hexadecimal}}
+              </span>
+            </div>
+          </div>
+        </ci-card>
+      </ng-content>
+    </div>
+    <div class="ci-my-xxl"></div>
+  </ng-content>
+</section>
+
+<ng-container *ngIf="copied">
+  <ci-dialog>
+    <div class="ci-fc ci-gap-sm">
+      <span ci-typography="body-sm" color="gray-900" weight="bold">
+        Copiado!!!
+      </span>
+      <span ci-typography="body-sm" color="gray-600" weight="regular">
+        {{content}}
+      </span>
+    </div>
+  </ci-dialog>
+</ng-container>

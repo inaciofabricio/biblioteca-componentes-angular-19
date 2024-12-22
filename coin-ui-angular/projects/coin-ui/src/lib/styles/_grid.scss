@@ -1,0 +1,135 @@
+@use './variables';
+
+.ci {
+  // Direção
+  &-fr {
+    display: flex;
+    flex-direction: row;
+  }
+  &-frr {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &-fc {
+    display: flex;
+    flex-direction: column;
+  }
+  &-fcr {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  // Alinhamento no eixo principal
+  &-jcs {
+    justify-content: start;
+  }
+  &-jcc {
+    justify-content: center;
+  }
+  &-jce {
+    justify-content: end;
+  }
+  &-jcsb {
+    justify-content: space-between;
+  }
+  &-jcsa {
+    justify-content: space-around;
+  }
+  &-jcse {
+    justify-content: space-evenly;
+  }
+
+  // Alinhamento no eixo transversal
+  &-ais {
+    align-items: start;
+  }
+  &-aic {
+    align-items: center;
+  }
+  &-aie {
+    align-items: end;
+  }
+  &-aib {
+    align-items: baseline;
+  }
+  &-ait {
+    align-items: stretch;
+  }
+
+  // Alinhamento de conteúdo
+  &-acs {
+    align-content: start;
+  }
+  &-acc {
+    align-content: center;
+  }
+  &-ace {
+    align-content: end;
+  }
+  &-acsb {
+    align-content: space-between;
+  }
+  &-acsa {
+    align-content: space-around;
+  }
+  &-acse {
+    align-content: space-evenly;
+  }
+
+  // Align-self
+  &-asa {
+    align-self: auto;
+  }
+  &-ass {
+    align-self: start;
+  }
+  &-ase {
+    align-self: end;
+  }
+  &-asc {
+    align-self: center;
+  }
+  &-asb {
+    align-self: baseline;
+  }
+  &-asst {
+    align-self: stretch;
+  }
+
+  // Flex-wrap
+  &-fw {
+    flex-wrap: wrap;
+  }
+  &-fnw {
+    flex-wrap: nowrap;
+  }
+  &-fwr {
+    flex-wrap: wrap-reverse;
+  }
+
+  @for $i from 0 through 10 {
+    &-fg#{$i} {
+      flex-grow: $i;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    &-fs#{$i} {
+      flex-shrink: $i;
+    }
+  }
+
+  @for $i from 0 through 20 {
+    $percent: $i * 5;
+    &-fb-#{$percent} {
+      flex-basis: #{$percent}+'%';
+    }
+  }
+
+  @each $key, $value in variables.$sizes {
+    &-gap-#{$key} {
+      gap: #{$value}px;
+    }
+  }
+
+}

@@ -1,0 +1,72 @@
+@use './variables';
+
+.ci {
+  &-typography {
+    &-heading {
+      &-xs {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-sm;
+        font-size: variables.$heading-xs;
+        font-style: normal;
+      }
+      &-sm {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-sm;
+        font-size: variables.$heading-sm;
+        font-style: normal;
+      }
+      &-md {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-sm;
+        font-size: variables.$heading-md;
+        font-style: normal;
+      }
+      &-lg {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-sm;
+        font-size: variables.$heading-lg;
+        font-style: normal;
+      }
+      &-xl {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-sm;
+        font-size: variables.$heading-xl;
+        font-style: normal;
+      }
+    }
+    &-body {
+      &-xxs {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-md;
+        font-size: variables.$body-xxs;
+        font-style: normal;
+      }
+      &-xs {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-md;
+        font-size: variables.$body-xs;
+        font-style: normal;
+      }
+      &-sm {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-md;
+        font-size: variables.$body-sm;
+        font-style: normal;
+      }
+      &-md {
+        font-family: variables.$font-family;
+        line-height: variables.$line-height-md;
+        font-size: variables.$body-md;
+        font-style: normal;
+      }
+    }
+  }
+  &-font-weight {
+    &-regular {
+      font-weight: variables.$font-weight-regular;
+    }
+    &-bold {
+      font-weight: variables.$font-weight-bold;
+    }
+  }
+}

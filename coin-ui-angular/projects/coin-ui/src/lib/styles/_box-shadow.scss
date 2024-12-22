@@ -1,0 +1,21 @@
+@use './variables';
+
+.ci {
+  @each $key, $value in variables.$sizes-box-shadow {
+    &-box-shadow-left-#{$key} {
+      box-shadow: -#{$value}px 0 10px rgba(0, 0, 0, 0.3);
+    }
+    &-box-shadow-right-#{$key} {
+      box-shadow: #{$value}px 0 10px rgba(0, 0, 0, 0.3);
+    }
+    &-box-shadow-top-#{$key} {
+      box-shadow: 0 -#{$value}px 10px rgba(0, 0, 0, 0.3);
+    }
+    &-box-shadow-bottom-#{$key} {
+      box-shadow: 0 #{$value}px 10px rgba(0, 0, 0, 0.3);
+    }
+    &-box-shadow-#{$key} {
+      box-shadow: 0 0 #{$value}px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

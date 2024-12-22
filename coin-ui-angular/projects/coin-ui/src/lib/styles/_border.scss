@@ -1,0 +1,23 @@
+@use './variables';
+
+.ci {
+  @each $key1, $value1 in variables.$colors {
+    @each $key2, $value2 in variables.$sizes-border {
+      &-border-left-#{$key1}-#{$key2} {
+        border-left: #{$value2}px solid #{$value1};
+      }
+      &-border-right-#{$key1}-#{$key2} {
+        border-right: #{$value2}px solid #{$value1};
+      }
+      &-border-top-#{$key1}-#{$key2} {
+        border-top: #{$value2}px solid #{$value1};
+      }
+      &-border-bottom-#{$key1}-#{$key2} {
+        border-bottom: #{$value2}px solid #{$value1};
+      }
+      &-border-#{$key1}-#{$key2} {
+        border: #{$value2}px solid #{$value1};
+      }
+    }
+  }
+}

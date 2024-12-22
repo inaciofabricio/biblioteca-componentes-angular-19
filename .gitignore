@@ -1,0 +1,77 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+coin-ui-angular/dist
+coin-ui-angular/tmp
+coin-ui-angular/out-tsc
+coin-ui-angular/bazel-out
+
+coin-ui-doc/dist
+coin-ui-doc/tmp
+coin-ui-doc/out-tsc
+coin-ui-doc/bazel-out
+
+# Node
+coin-ui-angular/node_modules
+coin-ui-angular/npm-debug.log
+coin-ui-angular/yarn-error.log
+
+coin-ui-doc/node_modules
+coin-ui-doc/npm-debug.log
+coin-ui-doc/yarn-error.log
+
+# IDEs and editors
+coin-ui-angular/.idea/
+coin-ui-angular/.project
+coin-ui-angular/.classpath
+coin-ui-angular/.c9/
+coin-ui-angular/*.launch
+coin-ui-angular/.settings/
+coin-ui-angular/*.sublime-workspace
+
+coin-ui-doc/.idea/
+coin-ui-doc/.project
+coin-ui-doc/.classpath
+coin-ui-doc/.c9/
+coin-ui-doc/*.launch
+coin-ui-doc/.settings/
+coin-ui-doc/*.sublime-workspace
+
+# Visual Studio Code
+coin-ui-angular/.vscode/*
+coin-ui-angular/!.vscode/settings.json
+coin-ui-angular/!.vscode/tasks.json
+coin-ui-angular/!.vscode/launch.json
+coin-ui-angular/!.vscode/extensions.json
+coin-ui-angular/.history/*
+
+coin-ui-doc/.vscode/*
+coin-ui-doc/!.vscode/settings.json
+coin-ui-doc/!.vscode/tasks.json
+coin-ui-doc/!.vscode/launch.json
+coin-ui-doc/!.vscode/extensions.json
+coin-ui-doc/.history/*
+
+# Miscellaneous
+coin-ui-angular/.angular/cache
+coin-ui-angular/.sass-cache/
+coin-ui-angular/connect.lock
+coin-ui-angular/coverage
+coin-ui-angular/libpeerconnection.log
+coin-ui-angular/testem.log
+coin-ui-angular/typings
+
+coin-ui-doc/.angular/cache
+coin-ui-doc/.sass-cache/
+coin-ui-doc/connect.lock
+coin-ui-doc/coverage
+coin-ui-doc/libpeerconnection.log
+coin-ui-doc/testem.log
+coin-ui-doc/typings
+
+# System files
+coin-ui-angular/.DS_Store
+coin-ui-angular/Thumbs.db
+
+coin-ui-doc/.DS_Store
+coin-ui-doc/Thumbs.db

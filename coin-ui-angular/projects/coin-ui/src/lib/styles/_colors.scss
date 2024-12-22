@@ -1,0 +1,9 @@
+@use './variables';
+
+.ci {
+  @each $key, $value in variables.$colors {
+    &-color-#{$key} {
+      color: $value;
+    }
+  }
+}

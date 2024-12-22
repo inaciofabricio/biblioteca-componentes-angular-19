@@ -1,0 +1,11 @@
+@use './variables';
+
+.ci {
+  &-button {
+    &-primary {
+      padding: 18px 12px 18px 12px;
+      background-color: variables.$brand-400;
+      color: variables.$gray-0;
+    }
+  }
+}

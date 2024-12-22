@@ -1,0 +1,89 @@
+  <nav class="container box-shadow ci-fr ci-jcsb ci-aic ci-mb-xl">
+
+    <div class="ci-fb-50">
+      <span
+        ci-typography="heading-xl"
+        color="gray-900"
+        weight="bold"
+        class="ci-cursor-pointer">
+        Coin UI Angular
+      </span>
+    </div>
+
+    <div class="ci-fr ci-jcc ci-fb-50">
+      <span
+        routerLink="/get-started"
+        ci-typography="heading-sm"
+        color="gray-700"
+        [weight]="currentRoute === 'get-started' ? 'bold' : 'regular'"
+        class="nav-link ci-fr ci-aic ci-px-md ci-cursor-pointer"
+        [ngClass]="{ 'ci-background-gray-200' : currentRoute === 'get-started' }">
+        Get Started
+      </span>
+      <span
+        routerLink="/foundations"
+        ci-typography="heading-sm"
+        color="gray-700"
+        [weight]="currentRoute === 'foundations' ? 'bold' : 'regular'"
+        class="nav-link ci-fr ci-aic ci-px-md ci-cursor-pointer"
+        [ngClass]="{ 'ci-background-gray-200' : currentRoute === 'foundations' }">
+        Foundations
+      </span>
+      <span
+        routerLink="/components"
+        ci-typography="heading-sm"
+        color="gray-700"
+        [weight]="currentRoute === 'components' ? 'bold' : 'regular'"
+        class="nav-link ci-fr ci-aic ci-px-md ci-cursor-pointer"
+        [ngClass]="{ 'ci-background-gray-200' : currentRoute === 'components' }">
+        Components
+      </span>
+    </div>
+
+  </nav>
+  <div class="container ci-fr ci-gap-xxl">
+    <div class="ci-fc c-gap-md ci-fb-15 ci-py-lg">
+      <ng-content *ngFor="let item of menu; let index = index">
+        <div>
+          <div
+            class="menu-link ci-pl-xxs ci-py-xs ci-cursor-pointer"
+            [ngClass]="{ 'ci-background-gray-200' : !currentSubRoute && currentRoute === item.path }"
+            [routerLink]="[item.path]"
+            (click)="openSubMenu(item)">
+            <span
+              ci-typography="heading-xs"
+              color="gray-900"
+              weight="bold"
+              >
+                {{ item.nome }}
+            </span>
+          </div>
+
+          <!-- Submenu -->
+          <ng-content *ngIf="item.subMenu && item?.visible">
+            <ng-content *ngFor="let subItem of item.subMenu">
+              <div
+                class="menu-link ci-pl-sm ci-py-xxs ci-cursor-pointer"
+                [ngClass]="{ 'ci-background-gray-200' : currentSubRoute === subItem.path }"
+                [routerLink]="[item.path,subItem.path]">
+                <span
+                  ci-typography="body-md"
+                  color="gray-900"
+                  weight="regular"
+                  [weight]="currentSubRoute === subItem.path ? 'bold' : 'regular'">
+                    {{ subItem.nome }}
+                </span>
+              </div>
+            </ng-content>
+          </ng-content>
+        </div>
+        <ng-content *ngIf="menu.length - 1 > index">
+          <div class="ci-border-top-gray-400-md ci-my-sm"></div>
+        </ng-content>
+      </ng-content>
+    </div>
+    <div class="ci-fb-85">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+

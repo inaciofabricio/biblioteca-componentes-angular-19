@@ -1,0 +1,29 @@
+@use './variables';
+
+.ci {
+  @each $key, $value in variables.$sizes {
+    &-p-#{$key} {
+      padding: #{$value}px;
+    }
+    &-pt-#{$key} {
+      padding-top: #{$value}px;
+    }
+    &-pr-#{$key} {
+      padding-right: #{$value}px;
+    }
+    &-pb-#{$key} {
+      padding-bottom: #{$value}px;
+    }
+    &-pl-#{$key} {
+      padding-left: #{$value}px;
+    }
+    &-px-#{$key} {
+      padding-left: #{$value}px;
+      padding-right: #{$value}px;
+    }
+    &-py-#{$key} {
+      padding-top: #{$value}px;
+      padding-bottom: #{$value}px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<h1 ci-typography="heading-md" color="gray-900" weight="bold">
+  Typography
+</h1>
+<div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
+<section class="ci-fc ci-gap-xxl">
+  <ng-content *ngFor="let typography of typographys">
+    <div class="ci-fr ci-jcsb ci-aic ci-pl-sm">
+      <h2 ci-typography="heading-sm" color="gray-900" weight="bold">
+        {{typography.name}}
+      </h2>
+      <div class="ci-fr ci-aic ci-gap-sm ci-fb-80">
+        <div class="ci-fr ci-jcc ci-fb-40">
+          <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+            Example
+          </h2>
+        </div>
+        <div class="ci-fr ci-jcc ci-fb-20">
+          <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+            font-size
+          </h2>
+        </div>
+        <div class="ci-fr ci-jcc ci-fb-20">
+          <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+            line-height
+          </h2>
+        </div>
+        <div class="ci-fr ci-jcc ci-fb-20">
+          <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+            font-style
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="ci-fc ci-gap-md">
+      <ng-content *ngFor="let item of typography.itens">
+        <div class="ci-fr ci-jcsb ci-aic ci-pl-xl">
+          <h2 ci-typography="body-md" color="gray-900" weight="bold">
+            {{ item.size }}
+          </h2>
+          <div class="ci-fr ci-aic ci-gap-sm ci-fb-80">
+            <div class="ci-fr ci-jcc ci-fb-40">
+              <h2 [ci-typography]="getTypography(typography.category,item.size)" color="gray-600" weight="regular">
+                Lorem ipsum dolor
+              </h2>
+            </div>
+            <div class="ci-fr ci-jcc ci-fb-20">
+              <h2 ci-typography="body-md" color="gray-900" weight="regular">
+                {{ item.lineHeight }}
+              </h2>
+            </div>
+            <div class="ci-fr ci-jcc ci-fb-20">
+              <h2 ci-typography="body-md" color="gray-900" weight="regular">
+                {{ item.fontSize }}
+              </h2>
+            </div>
+            <div class="ci-fr ci-jcc ci-fb-20">
+              <h2 ci-typography="body-md" color="gray-900" weight="regular">
+                {{ item.fontStyle }}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </ng-content>
+    </div>
+  </ng-content>
+</section>

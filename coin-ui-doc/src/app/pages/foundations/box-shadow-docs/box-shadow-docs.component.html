@@ -1,0 +1,39 @@
+<h1 ci-typography="heading-md" color="gray-900" weight="bold">
+  Box Shadow
+</h1>
+<div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
+<section class="ci-pl-md">
+  <ng-content *ngFor="let category of categories">
+    <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+      {{category}}
+    </h2>
+    <div class="ci-fr ci-gap-xl ci-p-md">
+      <ng-content *ngFor="let size of sizes">
+        <div
+          class="ci-py-md ci-px-xxl ci-fc ci-cursor-pointer"
+          [ngClass]="getBorderValue(category, size)"
+          (click)="copyText(category, size)">
+          <span ci-typography="body-md" color="gray-900" weight="bold" class="ci-fc ci-aic">
+            <span>{{ size?.name }}</span>
+          </span>
+          <span ci-typography="body-xs" color="gray-900" weight="regular" class="ci-fc ci-aic">
+            <span>{{ size?.size }}</span>
+          </span>
+        </div>
+      </ng-content>
+    </div>
+  </ng-content>
+</section>
+
+<ng-container *ngIf="copied">
+  <ci-dialog>
+    <div class="ci-fc ci-gap-sm">
+      <span ci-typography="body-sm" color="gray-900" weight="bold">
+        Copiado!!!
+      </span>
+      <span ci-typography="body-sm" color="gray-600" weight="regular">
+        {{content}}
+      </span>
+    </div>
+  </ci-dialog>
+</ng-container>
