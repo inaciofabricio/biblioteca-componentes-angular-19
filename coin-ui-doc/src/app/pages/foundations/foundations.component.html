@@ -2,10 +2,23 @@
   Foundations
 </h1>
 <div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
-<section class="ci-fr ci-gap-xl ci-px-xxl">
+<section class="ci-fc ci-gap-xl ci-px-xl ci-mb-xxl">
+  <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+    O que são as Foundations?
+  </h2>
+  <div class="ci-pl-md">
+    <p ci-typography="heading-xs" color="gray-600" weight="regular">
+      São os princípios básicos e elementos fundamentais que orientam o design e o desenvolvimento dos componentes.
+      Elas servem como o alicerce para manter a consistência, escalabilidade e usabilidade da interface.
+    </p>
+  </div>
+</section>
+<section class="ci-fr ci-jcc ci-gap-xl ci-fw ci-px-xxl">
 
   <!-- BACKGROUND -->
-  <ci-card radius="lg" shadow="lg" padding="xl" class="ci-fb-20">
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/background">
     <div class="ci-fc ci-jcc ci-gap-md foundation-card">
       <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
         <div class="ci-p-sm ci-background-brand-100"></div>
@@ -32,7 +45,9 @@
   </ci-card>
 
   <!-- BORDER -->
-  <ci-card radius="lg" shadow="lg" padding="xl" class="ci-fb-20">
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/border">
     <div class="ci-fc ci-jcc ci-gap-md foundation-card">
       <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
         <div class="ci-border-brand-100-sm ci-pl-xxs ci-pr-xxs">Aa</div>
@@ -52,8 +67,58 @@
     </div>
   </ci-card>
 
+  <!-- BORDER RADIUS -->
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/border-radius">
+    <div class="ci-fc ci-jcc ci-gap-md foundation-card">
+      <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
+        <div class="ci-border-brand-100-sm ci-border-radius-xs ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-border-brand-100-sm ci-border-radius-sm ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-border-brand-100-sm ci-border-radius-lg ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-border-brand-100-sm ci-border-radius-full ci-pl-xxs ci-pr-xxs">Aa</div>
+      </div>
+      <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
+        <div class="ci-border-feedback-danger-100-sm ci-border-radius-xs ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-border-feedback-danger-100-sm ci-border-radius-sm ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-border-feedback-danger-100-sm ci-border-radius-lg ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-border-feedback-danger-100-sm ci-border-radius-full ci-pl-xxs ci-pr-xxs">Aa</div>
+      </div>
+      <div class="ci-fr ci-jcc">
+        <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Border Radius
+        </h2>
+      </div>
+    </div>
+  </ci-card>
+
+  <!-- BOX SHADOW -->
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/box-shadow">
+    <div class="ci-fc ci-jcc ci-gap-md foundation-card">
+      <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
+        <div class="ci-box-shadow-top-sm ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-box-shadow-top-md ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-box-shadow-top-lg ci-pl-xxs ci-pr-xxs">Aa</div>
+      </div>
+      <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
+        <div class="ci-box-shadow-sm ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-box-shadow-md ci-pl-xxs ci-pr-xxs">Aa</div>
+        <div class="ci-box-shadow-lg ci-pl-xxs ci-pr-xxs">Aa</div>
+      </div>
+      <div class="ci-fr ci-jcc">
+        <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Box Shadow
+        </h2>
+      </div>
+    </div>
+  </ci-card>
+
   <!-- COLOR -->
-  <ci-card radius="lg" shadow="lg" padding="xl" class="ci-fb-20">
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/color">
     <div class="ci-fc ci-jcc ci-gap-md foundation-card">
       <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
         <div class="ci-color-brand-100">Aa</div>
@@ -74,6 +139,124 @@
       <div class="ci-fr ci-jcc">
         <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
           Color
+        </h2>
+      </div>
+    </div>
+  </ci-card>
+
+  <!-- GRID -->
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/grid">
+    <div class="ci-fc ci-jcc ci-gap-md foundation-card">
+      <div class="ci-fr ci-fw ci-gap-sm ci-border-gray-300-sm">
+        <div class="ci-p-sm ci-background-brand-300"></div>
+        <div class="ci-p-sm ci-background-brand-300"></div>
+        <div class="ci-p-sm ci-background-brand-300"></div>
+      </div>
+      <div class="ci-fr ci-jcsb ci-fw ci-gap-sm ci-border-gray-300-sm">
+        <div class="ci-p-sm ci-background-brand-300"></div>
+        <div class="ci-p-sm ci-background-brand-300"></div>
+        <div class="ci-p-sm ci-background-brand-300"></div>
+      </div>
+      <div class="ci-fr ci-jcc">
+        <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Grid
+        </h2>
+      </div>
+    </div>
+  </ci-card>
+
+  <!-- MARGIN -->
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/margin">
+    <div class="ci-fc ci-jcc ci-gap-md foundation-card">
+      <div class="ci-fr ci-jcc ci-aic ci-fw ci-gap-sm">
+        <div class="ci-background-feedback-warning-400 ci-p-xxs">
+          <div class="ci-background-gray-0 ci-border-gray-600-sm ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+        <div class="ci-background-feedback-warning-400 ci-p-xs">
+          <div class="ci-background-gray-0 ci-border-gray-600-sm ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+        <div class="ci-background-feedback-warning-400 ci-p-sm">
+          <div class="ci-background-gray-0 ci-border-gray-600-sm ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+        <div class="ci-background-feedback-warning-400 ci-p-md">
+          <div class="ci-background-gray-0 ci-border-gray-600-sm ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+      </div>
+      <div class="ci-fr ci-jcc">
+        <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Margin
+        </h2>
+      </div>
+    </div>
+  </ci-card>
+
+  <!-- PADDING -->
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/padding">
+    <div class="ci-fc ci-jcc ci-gap-md foundation-card">
+      <div class="ci-fr ci-jcc ci-aic ci-fw ci-gap-sm">
+        <div class="ci-border-gray-600-sm ci-background-feedback-success-400 ci-p-xxs">
+          <div class="ci-background-gray-0 ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+        <div class="ci-border-gray-600-sm ci-background-feedback-success-400 ci-p-xs">
+          <div class="ci-background-gray-0 ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+        <div class="ci-border-gray-600-sm ci-background-feedback-success-400 ci-p-sm">
+          <div class="ci-background-gray-0 ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+        <div class="ci-border-gray-600-sm ci-background-feedback-success-400 ci-p-md">
+          <div class="ci-background-gray-0 ci-color-gray-900">
+            Aa
+          </div>
+        </div>
+      </div>
+      <div class="ci-fr ci-jcc">
+        <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Padding
+        </h2>
+      </div>
+    </div>
+  </ci-card>
+
+  <!-- TYPOGRAPHY -->
+  <ci-card radius="lg" shadow="lg" padding="xl"
+    class="ci-fb-20 ci-cursor-pointer"
+    routerLink="/foundations/typography">
+    <div class="ci-fc ci-jcc ci-gap-md foundation-card">
+      <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
+        <div class="ci-color-brand-100 ci-typography-body-xxs">Aa</div>
+        <div class="ci-color-brand-200 ci-typography-body-xs">Aa</div>
+        <div class="ci-color-brand-300 ci-typography-body-sm">Aa</div>
+        <div class="ci-color-brand-400 ci-typography-body-md">Aa</div>
+      </div>
+      <div class="ci-fr ci-jcc ci-fw ci-gap-sm">
+        <div class="ci-color-brand-400 ci-typography-heading-xs">Aa</div>
+        <div class="ci-color-brand-400 ci-typography-heading-sm">Aa</div>
+        <div class="ci-color-brand-400 ci-typography-heading-md">Aa</div>
+        <div class="ci-color-brand-400 ci-typography-heading-lg">Aa</div>
+      </div>
+      <div class="ci-fr ci-jcc">
+        <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Typography
         </h2>
       </div>
     </div>

@@ -1,1 +1,115 @@
-<p>card-docs works!</p>
+<div class="ci-pb-xxl">
+  <h1 ci-typography="heading-md" color="gray-900" weight="bold">
+    Card
+  </h1>
+  <div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
+  <div class="ci-fr ci-jcsb ci-px-xl">
+    <div class="ci-fc ci-gap-md ci-fb-35">
+      <h2 ci-typography="heading-sm" color="gray-900" weight="bold">
+        Exemplo:
+      </h2>
+      <div class="ci-p-xs">
+        <ci-card [radius]="radius" [shadow]="shadow" [padding]="padding">
+          <p ci-typography="body-md" color="gray-600" weight="regular">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet nibh a augue blandit semper non id arcu.
+            Aenean nec facilisis dui. Suspendisse potenti. Nunc non mi urna. Morbi pulvinar tincidunt risus eget cursus.
+            Cras vel leo tincidunt erat aliquet tincidunt sit amet vitae lectus. Aliquam placerat convallis sapien nec eleifend.
+          </p>
+        </ci-card>
+      </div>
+    </div>
+    <div class="ci-fc ci-jcc ci-border-right-gray-400-sm"></div>
+    <div class="ci-fc ci-gap-xl ci-fb-60">
+      <h2 ci-typography="heading-sm" color="gray-900" weight="bold">
+        Propriedades:
+      </h2>
+      <div class="ci-fc ci-gap-md ci-pl-xs">
+        <h3 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Parametros:
+        </h3>
+        <div class="ci-fc ci-gap-md ci-pl-xs">
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div>
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                radius:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of radiusSizes">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="radius === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setRadius(item)">
+                  <span ci-typography="heading-xs" [color]="radius === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div class="ci-fg-1">
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                shadow:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of shadowSizes">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="shadow === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setShadow(item)">
+                  <span ci-typography="heading-xs" [color]="shadow === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div class="ci-fg-1">
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                padding:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of paddingSizes">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="padding === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setPadding(item)">
+                  <span ci-typography="heading-xs" [color]="padding === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ci-border-top-gray-400-md"></div>
+      <div class="ci-fc ci-gap-md ci-pl-xs">
+        <h3 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Aplicação:
+        </h3>
+        <div class="ci-fc ci-gap-xs ci-pl-xs">
+          <h4 ci-typography="body-md" color="gray-900" weight="bold">
+            Html:
+          </h4>
+          <pre class="ci-background-gray-700">
+              <code class="ci-color-gray-0">
+                {{ codeHtml }}
+              </code>
+          </pre>
+        </div>
+        <div class="ci-fc ci-gap-xs ci-pl-xs">
+          <h4 ci-typography="body-md" color="gray-900" weight="bold">
+            Typescript:
+          </h4>
+          <pre class="ci-background-gray-700">
+              <code class="ci-color-gray-0">
+                {{ codeTypescript }}
+              </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

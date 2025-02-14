@@ -108,13 +108,13 @@
   }
 
   @for $i from 0 through 10 {
-    &-fg#{$i} {
+    &-fg-#{$i} {
       flex-grow: $i;
     }
   }
 
   @for $i from 0 through 10 {
-    &-fs#{$i} {
+    &-fs-#{$i} {
       flex-shrink: $i;
     }
   }

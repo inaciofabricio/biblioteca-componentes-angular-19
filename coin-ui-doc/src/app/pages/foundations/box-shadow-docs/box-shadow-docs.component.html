@@ -4,9 +4,18 @@
 <div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
 <section class="ci-pl-md">
   <ng-content *ngFor="let category of categories">
-    <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
-      {{category}}
-    </h2>
+    <div class="ci-fr ci-aic ci-gap-xs ci-mb-xs">
+      <h2 ci-typography="heading-xs" color="gray-900" weight="bold">
+        {{category}}
+      </h2>
+      <span ci-typography="body-sm" color="gray-900" weight="regular">
+        [
+          <span class="ci-color-feedback-info-400 ci-font-weight-bold">class</span>="
+          <span class="ci-color-feedback-warning-500 ci-font-weight-bold">ci-box-shadow-{{getBorderCatgoryValue(category)}}</span>
+          <span class="ci-font-weight-bold">SIZE</span>"
+        ]
+      </span>
+    </div>
     <div class="ci-fr ci-gap-xl ci-p-md">
       <ng-content *ngFor="let size of sizes">
         <div

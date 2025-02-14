@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { COLORS } from '../../constants/color.constants';
@@ -13,7 +13,7 @@ import { Color } from '../../types/color';
     standalone: true,
     imports: [],
 })
-export class IconComponent implements OnInit {
+export class IconComponent implements OnInit, OnChanges {
 
     @Input() name!: IconName;
     @Input() type!: IconType;
@@ -31,36 +31,43 @@ export class IconComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-
-        const sizes = ICON_SIZES;
-        const sizePX = sizes[this.size];
-        this.sizePX = sizePX ? sizePX : sizes['sm'];
-
-        const colors = COLORS;
-        const colorHex = colors[this.color];
-        this.colorHex = colorHex ? colorHex : colors['gray-0'];
-
-        if(!this.type) {
-            console.error("IconComponent - 'type' não existem ou não informado!")
-            return
-        }
-
-        const icon = this.findIconName(this.name);
-
-        if (!icon) {
-            console.error("IconComponent - 'name' não existem ou não informado!")
-            return
-        }
-
-        this.loadIcon(icon);
+      this.update();
     }
+
+    ngOnChanges(): void {
+      this.update();
+    }
+
+    update() {
+
+      const sizes = ICON_SIZES;
+      const sizePX = sizes[this.size];
+      this.sizePX = sizePX ? sizePX : sizes['sm'];
+
+      const colors = COLORS;
+      const colorHex = colors[this.color];
+      this.colorHex = colorHex ? colorHex : colors['gray-0'];
+
+      if(!this.type) {
+          console.error("IconComponent - 'type' não existem ou não informado!")
+          return
+      }
+
+      const icon = this.findIconName(this.name);
+
+      if (!icon) {
+          console.error("IconComponent - 'name' não existem ou não informado!")
+          return
+      }
+
+      this.loadIcon(icon);
+  }
 
     private loadIcon(icon: { category: string; name: string }) {
         const path = `assets/coin-ui/imgs/${this.type}/${icon.category}/${icon.name}.svg`;
         this.http.get(path, { responseType: 'text' }).subscribe({
             next: (svg) => {
                 const extractedPath = this.cleanSvg(svg);
-                console.log(extractedPath)
                 this.svgContent = this.sanitizer.bypassSecurityTrustHtml(extractedPath);
             },
             error: (err) => console.error(`IconComponent - Erro ao carregar o ícone: Type: ${this.type}, Name: ${this.name}`, err),

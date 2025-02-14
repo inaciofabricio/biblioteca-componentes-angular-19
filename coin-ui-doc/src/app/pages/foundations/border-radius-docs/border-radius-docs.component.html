@@ -2,19 +2,30 @@
   Border Radius
 </h1>
 <div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
-<section class="ci-fr ci-gap-xs ci-pl-md">
-  <ng-content *ngFor="let item of sizes">
-    <div class="ci-background-gray-0 ci-border-gray-400-md ci-py-md ci-px-xl ci-fc ci-cursor-pointer"
-      [ngClass]="getClassValue(item)"
-      (click)="copyText(item)">
-      <span ci-typography="body-md" color="gray-900" weight="bold" class="ci-fc ci-aic">
-        <span>{{ item?.name }}</span>
-      </span>
-      <span ci-typography="body-xs" color="gray-900" weight="regular" class="ci-fc ci-aic">
-        <span>{{ item?.size }}</span>
-      </span>
-    </div>
-  </ng-content>
+<section class="ci-fc ci-gap-xs ci-pl-md">
+  <div class="ci-fr ci-aic ci-gap-xs ci-mb-xs">
+    <span ci-typography="body-sm" color="gray-900" weight="regular">
+      [
+        <span class="ci-color-feedback-info-400 ci-font-weight-bold">class</span>="
+        <span class="ci-color-feedback-warning-500 ci-font-weight-bold">ci-border-radius-</span>
+        <span class="ci-font-weight-bold">SIZE</span>"
+      ]
+    </span>
+  </div>
+  <div class="ci-fr ci-gap-xs">
+    <ng-content *ngFor="let item of sizes">
+      <div class="ci-background-gray-0 ci-border-gray-400-md ci-py-md ci-px-xl ci-fc ci-cursor-pointer"
+        [ngClass]="getClassValue(item)"
+        (click)="copyText(item)">
+        <span ci-typography="body-md" color="gray-900" weight="bold" class="ci-fc ci-aic">
+          <span>{{ item?.name }}</span>
+        </span>
+        <span ci-typography="body-xs" color="gray-900" weight="regular" class="ci-fc ci-aic">
+          <span>{{ item?.size }}</span>
+        </span>
+      </div>
+    </ng-content>
+  </div>
 </section>
 
 <ng-container *ngIf="copied">

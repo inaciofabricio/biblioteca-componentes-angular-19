@@ -3,9 +3,78 @@
 .ci {
   &-button {
     &-primary {
-      padding: 18px 12px 18px 12px;
       background-color: variables.$brand-400;
-      color: variables.$gray-0;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-primary:hover {
+      background-color: variables.$brand-500;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-primary:active {
+      background-color: variables.$brand-600;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-primary:focus {
+      background-color: variables.$brand-500;
+      box-shadow: 0 0 0 2px variables.$brand-500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    &-primary:disabled {
+      background-color: variables.$brand-100;
+      border: 2px solid variables.$gray-0;
+      cursor: no-drop;
+    }
+
+    &-secundary {
+      background-color: variables.$gray-200;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-secundary:hover {
+      background-color: variables.$gray-300;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-secundary:active {
+      background-color: variables.$gray-400;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-secundary:focus {
+      background-color: variables.$gray-300;
+      box-shadow: 0 0 0 3px variables.$gray-300;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    &-secundary:disabled {
+      background-color: variables.$gray-100;
+      border: 2px solid variables.$gray-0;
+      cursor: no-drop;
+    }
+
+    &-ghost {
+      background-color: variables.$gray-0;
+      border: 2px solid variables.$gray-0;
+      cursor: pointer;
+    }
+    &-ghost:focus {
+      background-color: variables.$gray-0;
+      box-shadow: 0 0 0 3px variables.$gray-300;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    &-ghost:disabled {
+      background-color: variables.$gray-0;
+      border: 2px solid variables.$gray-0;
+      cursor: no-drop;
+    }
+
+    &-full {
+      width: 100%;
     }
   }
 }

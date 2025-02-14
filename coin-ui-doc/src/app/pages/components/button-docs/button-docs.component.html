@@ -1,1 +1,163 @@
-<p>button-docs works!</p>
+<div class="ci-pb-xxl">
+  <h1 ci-typography="heading-md" color="gray-900" weight="bold">
+    Button
+  </h1>
+  <div class="ci-border-top-gray-400-md ci-mt-sm ci-mb-xxl"></div>
+  <div class="ci-fr ci-jcsb ci-px-xl">
+    <div class="ci-fc ci-gap-md ci-fb-35">
+      <h2 ci-typography="heading-sm" color="gray-900" weight="bold">
+        Exemplo:
+      </h2>
+      <div class="ci-p-xs">
+        <ci-button [type]="type" [size]="size" [text]="text" [icon]="icon" [disabled]="disabled" [full]="full"></ci-button>
+      </div>
+    </div>
+    <div class="ci-fc ci-jcc ci-border-right-gray-400-sm"></div>
+    <div class="ci-fc ci-gap-xl ci-fb-60">
+      <h2 ci-typography="heading-sm" color="gray-900" weight="bold">
+        Propriedades:
+      </h2>
+      <div class="ci-fc ci-gap-md ci-pl-xs">
+        <h3 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Parametros:
+        </h3>
+        <div class="ci-fc ci-gap-md ci-pl-xs">
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div>
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                type:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of types">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="type === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setType(item)">
+                  <span ci-typography="heading-xs" [color]="type === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div>
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                size:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of sizes">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="size === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setSize(item)">
+                  <span ci-typography="heading-xs" [color]="size === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div>
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                icon:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-background-brand-300 ci-cursor-pointer"
+                (click)="openViewIcon()">
+                <span ci-typography="heading-xs" color="gray-0" weight="regular">
+                  {{ icon }}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div>
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                disabled:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of booleanOptions">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="fakeDisabled === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setDisabled(item)">
+                  <span ci-typography="heading-xs" [color]="fakeDisabled === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+          <div class="ci-fr ci-aic ci-jcsb">
+            <div>
+              <span ci-typography="heading-xs" color="gray-900" weight="regular">
+                full:
+              </span>
+            </div>
+            <div class="ci-fr ci-jcc ci-gap-xs">
+              <ng-content *ngFor="let item of booleanOptions">
+                <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+                  [ngClass]="fakeFull === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+                  (click)="setFull(item)">
+                  <span ci-typography="heading-xs" [color]="fakeFull === item ? 'gray-0' : 'brand-300'" weight="regular">
+                    {{ item }}
+                  </span>
+                </div>
+              </ng-content>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ci-border-top-gray-400-md"></div>
+      <div class="ci-fc ci-gap-md ci-pl-xs">
+        <h3 ci-typography="heading-xs" color="gray-900" weight="bold">
+          Aplicação:
+        </h3>
+        <div class="ci-fc ci-gap-xs ci-pl-xs">
+          <h4 ci-typography="body-md" color="gray-900" weight="bold">
+            Html:
+          </h4>
+          <pre class="ci-background-gray-700">
+              <code class="ci-color-gray-0">
+                {{ codeHtml }}
+              </code>
+          </pre>
+        </div>
+        <div class="ci-fc ci-gap-xs ci-pl-xs">
+          <h4 ci-typography="body-md" color="gray-900" weight="bold">
+            Typescript:
+          </h4>
+          <pre class="ci-background-gray-700">
+              <code class="ci-color-gray-0">
+                {{ codeTypescript }}
+              </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="viewIcon">
+  <ci-dialog>
+    <div class="ci-fr ci-jce ci-px-sm ci-cursor-pointer" (click)="closeViewIcon()">
+      <span ci-typography="heading-xs" color="gray-900" weight="bold">
+        X
+      </span>
+    </div>
+    <div class="ci-fr ci-jcc ci-gap-xs ci-fw ci-p-xl">
+      <ng-content *ngFor="let item of icons">
+        <div class="ci-py-xxs ci-px-xs ci-border-radius-xxl ci-border-brand-300-sm ci-cursor-pointer"
+          [ngClass]="icon === item ? 'ci-background-brand-300' : 'ci-background-gray-0'"
+          (click)="setIcon(item)">
+          <span ci-typography="heading-xs" [color]="icon === item ? 'gray-0' : 'brand-300'" weight="regular">
+            {{ item }}
+          </span>
+        </div>
+      </ng-content>
+    </div>
+  </ci-dialog>
+</ng-container>

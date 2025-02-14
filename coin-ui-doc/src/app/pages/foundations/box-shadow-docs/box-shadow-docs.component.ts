@@ -58,4 +58,13 @@ export class BoxShadowDocsComponent {
 
 	}
 
+	getBorderCatgoryValue(category: string): string {
+
+		if (!category) {
+			return ""
+		}
+
+		return category === 'Complete' ? '' : `${category.toLowerCase()}-`;
+	}
+
 }

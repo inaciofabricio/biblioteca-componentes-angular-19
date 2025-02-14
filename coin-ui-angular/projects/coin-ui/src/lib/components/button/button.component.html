@@ -1,4 +1,11 @@
-<button>
-  <ci-icon [name]="'store'" [type]="'fill'" [size]="'sm'" [color]="'brand-200'" ></ci-icon>
-  <span>{{ text }}</span>
+<button
+  class="ci-fr ci-aic ci-jcc ci-gap-xs ci-px-md ci-py-sm ci-border-radius-md"
+  [ngClass]="getButtonClasses()"
+  [disabled]="disabled">
+  <ng-container *ngIf="icon">
+    <ci-icon [name]="icon" type="fill" [size]="getSizeIcon()" [color]="getColor()"></ci-icon>
+  </ng-container>
+  <span [ci-typography]="getTypography()" [color]="getColor()" weight="bold">
+    {{ text }}
+  </span>
 </button>

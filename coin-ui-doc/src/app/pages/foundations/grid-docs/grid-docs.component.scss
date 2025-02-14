@@ -1,0 +1,10 @@
+.grid {
+  &-content {
+    width: 250px;
+    height: 100px;
+    &-box {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

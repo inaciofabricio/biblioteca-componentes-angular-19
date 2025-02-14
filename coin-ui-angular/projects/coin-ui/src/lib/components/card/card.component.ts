@@ -14,7 +14,5 @@ export class CardComponent implements OnInit {
   @Input() shadow: CardShadow = "md";
   @Input() padding: CardPadding = "md";
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 }
